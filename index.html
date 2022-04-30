@@ -1,55 +1,642 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kastau</title>
 
-    <title>Kastau | Lorem ipsum dolor sit.</title>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
 
-  </head>
-  <body style="background-image: url(img/bg_header.png); background-size: cover;">
+    <!-- Getbootstrap ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+
+    <!-- CDN TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nunito: ['Nunito', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body class="font-nunito">
+
+    <section>
+        <div class="relative bg-[#F3F4F6] pt-5">
+            <div class="absolute inset-x-0 bottom-0">
+                <svg viewBox="0 0 224 12" fill="currentColor" class="w-full -mb-1 text-white"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="container flex justify-between h-16 mx-auto text-slate-700">
+                <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                    <img src="img/logo.svg" class="w-14">
+                </a>
+                <ul class="items-stretch hidden space-x-3 md:flex">
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Beranda</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Tentang</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Produk</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Tim</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div class="flex flex-col items-center justify-between xl:flex-row">
+                    <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                        <h2
+                            class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-slate-700 sm:text-4xl sm:leading-none">
+                            The quick, brown fox <br class="hidden md:block" />
+                            jumps over a lazy dog
+                        </h2>
+                        <p class="max-w-xl mb-4 text-base text-slate-700 md:text-lg">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudan, totam rem aperiam, eaque ipsa quae.
+                        </p>
+                        <button type="button"
+                            class="text-white bg-[#64EAA0] hover:bg-[#55d18d] focus:ring-4 focus:bg-[#64EAA0] font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 ">Produk
+                            Kami</button>
+                    </div>
+                    <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+                        <img src="img/header.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="grid gap-10 lg:grid-cols-2">
+                <div class="lg:pr-10">
+                    <a href="/" aria-label="Go Home" title="Logo" class="inline-block mb-5">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                            <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor"
+                                viewBox="0 0 52 52">
+                                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                            </svg>
+                        </div>
+                    </a>
+                    <h5 class="mb-4 text-4xl font-extrabold leading-none">
+                        The quick, brown fox<br class="hidden md:block" />
+                        jumps over
+                        <span class="inline-block text-deep-purple-accent-400">a lazy dog</span>
+                    </h5>
+                    <p class="mb-6 text-gray-900">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae explicabo. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem totam rem aperiam, eaque
+                        ipsa quae explicabo.
+                    </p>
+                    <hr class="mb-5 border-gray-300" />
+                    <div class="flex items-center space-x-4">
+                        <a href="/"
+                            class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                                <path
+                                    d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="/"
+                            class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                                <circle cx="15" cy="15" r="4"></circle>
+                                <path
+                                    d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="/"
+                            class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                                <path
+                                    d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="/"
+                            class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                            <svg viewBox="0 0 24 24" fill="currentColor" class="h-6">
+                                <path
+                                    d="M23.8,7.2c0,0-0.2-1.7-1-2.4c-0.9-1-1.9-1-2.4-1C17,3.6,12,3.6,12,3.6h0c0,0-5,0-8.4,0.2 c-0.5,0.1-1.5,0.1-2.4,1c-0.7,0.7-1,2.4-1,2.4S0,9.1,0,11.1v1.8c0,1.9,0.2,3.9,0.2,3.9s0.2,1.7,1,2.4c0.9,1,2.1,0.9,2.6,1 c1.9,0.2,8.2,0.2,8.2,0.2s5,0,8.4-0.3c0.5-0.1,1.5-0.1,2.4-1c0.7-0.7,1-2.4,1-2.4s0.2-1.9,0.2-3.9v-1.8C24,9.1,23.8,7.2,23.8,7.2z M9.5,15.1l0-6.7l6.5,3.4L9.5,15.1z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+                        src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                <div>
+                    <p
+                        class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                        Brand new
+                    </p>
+                </div>
+                <h2
+                    class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                    <span class="relative inline-block">
+                        <svg viewBox="0 0 52 24" fill="currentColor"
+                            class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                            <defs>
+                                <pattern id="07690130-d013-42bc-83f4-90de7ac68f76" x="0" y="0" width=".135"
+                                    height=".30">
+                                    <circle cx="1" cy="1" r=".7"></circle>
+                                </pattern>
+                            </defs>
+                            <rect fill="url(#07690130-d013-42bc-83f4-90de7ac68f76)" width="52" height="24"></rect>
+                        </svg>
+                        <span class="relative">The</span>
+                    </span>
+                    quick, brown fox jumps over a lazy dog
+                </h2>
+                <p class="text-base text-gray-700 md:text-lg">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam,
+                    eaque ipsa quae.
+                </p>
+            </div>
+            <div class="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x">
+                <div class="space-y-6 sm:px-16">
+                    <div class="flex flex-col max-w-md sm:flex-row">
+                        <div class="mb-4 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                                    viewBox="0 0 52 52">
+                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-3 text-xl font-bold leading-5">The deep ocean</h6>
+                            <p class="text-sm text-gray-900">
+                                Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr zimbra, mobly napster.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:flex-row">
+                        <div class="mb-4 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                                    viewBox="0 0 52 52">
+                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-3 text-xl font-bold leading-5">When has justice</h6>
+                            <p class="text-sm text-gray-900">
+                                Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave
+                                down clap of thunder.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:flex-row">
+                        <div class="mb-4 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                                    viewBox="0 0 52 52">
+                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-3 text-xl font-bold leading-5">Leverage agile</h6>
+                            <p class="text-sm text-gray-900">
+                                The first mate and his Skipper too will do their very best to make the others
+                                comfortable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6 sm:px-16">
+                    <div class="flex flex-col max-w-md sm:flex-row">
+                        <div class="mb-4 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                                    viewBox="0 0 52 52">
+                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-3 text-xl font-bold leading-5">Organically grow</h6>
+                            <p class="text-sm text-gray-900">
+                                Skate ipsum dolor sit amet, alley oop vert mute-air Colby Carter flail 180 berm over the
+                                sea.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:flex-row">
+                        <div class="mb-4 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                                    viewBox="0 0 52 52">
+                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-3 text-xl font-bold leading-5">Have a good one</h6>
+                            <p class="text-sm text-gray-900">
+                                Cheese on toast airedale the big cheese. Danish fontina cheesy grin airedale danish
+                                fontina.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col max-w-md sm:flex-row">
+                        <div class="mb-4 mr-4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                                    viewBox="0 0 52 52">
+                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-3 text-xl font-bold leading-5">A slice of heaven</h6>
+                            <p class="text-sm text-gray-900">
+                                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="h-[32rem] bg-gray-100 dark:bg-gray-800">
+            <div class="container px-6 py-10 mx-auto">
+                <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">The
+                    Executive Team</h1>
+
+                <div class="flex justify-center mx-auto mt-6">
+                    <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+                </div>
+
+                <p class="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia
+                    error alias, adipisci rem similique, at omnis eligendi optio eos harum.
+                </p>
+            </div>
+        </div>
+
+        <div class="container px-6 py-10 mx-auto -mt-72 sm:-mt-80 md:-mt-96">
+            <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
+                <div class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700">
+                    <img class="object-cover w-full rounded-xl aspect-square"
+                        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                        alt="">
+
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">arthur melo</h1>
+
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">design director</p>
+
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700">
+                    <img class="object-cover w-full rounded-xl aspect-square"
+                        src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                        alt="">
+
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Pamela Anderson
+                    </h1>
+
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Lead Developer</p>
+
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700">
+                    <img class="object-cover w-full rounded-xl aspect-square"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                        alt="">
+
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">John Doe</h1>
+
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Full stack developer</p>
+
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="overflow-hidden ">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div class="flex flex-col items-center justify-between xl:flex-row">
+                    <div class="w-full max-w-xl mb-12 xl:pr-16 xl:mb-0 xl:w-7/12">
+                        <div class="flex flex-col justify-between">
+                            <div class="space-y-2">
+                                <h2 class="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
+                                <div class="dark:text-coolGray-400">Vivamus in nisl metus? Phasellus.</div>
+                            </div>
+                            <img src="img/doodle.svg" alt="" class="p-6 h-52 md:h-64">
+                        </div>
+                    </div>
+                    <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+                        <div class="relative">
+                            <svg viewBox="0 0 52 24" fill="currentColor"
+                                class="absolute bottom-0 right-0 z-0 hidden w-32 -mb-8 -mr-20 text-teal-accent-400 lg:w-32 lg:-mr-16 sm:block">
+                                <defs>
+                                    <pattern id="766323e1-e594-4ffd-a688-e7275079d540" x="0" y="0" width=".135"
+                                        height=".30">
+                                        <circle cx="1" cy="1" r=".7"></circle>
+                                    </pattern>
+                                </defs>
+                                <rect fill="url(#766323e1-e594-4ffd-a688-e7275079d540)" width="52" height="24"></rect>
+                            </svg>
+                            <div class="relative bg-white rounded shadow-2xl p-7 sm:p-10">
+                                <h3 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
+                                    Sign up for updates
+                                </h3>
+                                <form>
+                                    <div class="mb-1 sm:mb-2">
+                                        <label for="name" class="inline-block mb-1 font-medium">Name</label>
+                                        <input placeholder="John Doe" required="" type="text"
+                                            class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                            id="name" name="name" />
+                                    </div>
+                                    <div class="mb-1 sm:mb-2">
+                                        <label for="email" class="inline-block mb-1 font-medium">E-mail</label>
+                                        <input placeholder="john.doe@example.org" required="" type="text"
+                                            class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                            id="email" name="email" />
+                                    </div>
+                                    <div class="mt-4 mb-2 sm:mb-4">
+                                        <button type="submit"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                                            Subscribe
+                                        </button>
+                                    </div>
+                                    <p class="text-xs text-gray-600 sm:text-sm">
+                                        We respect your privacy. Unsubscribe at any time.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="relative mt-16 bg-[#F3F4F6]">
+            <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-[#F3F4F6]" preserveAspectRatio="none"
+                viewBox="0 0 1440 54">
+                <path fill="currentColor"
+                    d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z">
+                </path>
+            </svg>
+            <div class="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+                    <div class="lg:w-1/3">
+                        <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"
+                                    class="flex-shrink-0 w-5 h-5 rounded-full dark:text-coolGray-900">
+                                    <path
+                                        d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="self-center text-2xl font-semibold">Brand name</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+                        <div class="space-y-3">
+                            <h3 class="tracking-wide uppercase dark:text-coolGray-50">Product</h3>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Features</a>
+                                </li>
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Integrations</a>
+                                </li>
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Pricing</a>
+                                </li>
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="tracking-wide uppercase dark:text-coolGray-50">Company</h3>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Terms of Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="uppercase dark:text-coolGray-50">Developers</h3>
+                            <ul class="space-y-1">
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Public API</a>
+                                </li>
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Documentation</a>
+                                </li>
+                                <li>
+                                    <a rel="noopener noreferrer" href="#">Guides</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="uppercase dark:text-coolGray-50">Social media</div>
+                            <div class="flex justify-start space-x-3">
+                                <a rel="noopener noreferrer" href="#" title="Facebook" class="flex items-center p-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32"
+                                        class="w-5 h-5 fill-current">
+                                        <path
+                                            d="M32 16c0-8.839-7.167-16-16-16-8.839 0-16 7.161-16 16 0 7.984 5.849 14.604 13.5 15.803v-11.177h-4.063v-4.625h4.063v-3.527c0-4.009 2.385-6.223 6.041-6.223 1.751 0 3.584 0.312 3.584 0.312v3.937h-2.021c-1.984 0-2.604 1.235-2.604 2.5v3h4.437l-0.713 4.625h-3.724v11.177c7.645-1.199 13.5-7.819 13.5-15.803z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a rel="noopener noreferrer" href="#" title="Twitter" class="flex items-center p-1">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-5 h-5 fill-current">
+                                        <path
+                                            d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a rel="noopener noreferrer" href="#" title="Instagram" class="flex items-center p-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"
+                                        class="w-5 h-5 fill-current">
+                                        <path
+                                            d="M16 0c-4.349 0-4.891 0.021-6.593 0.093-1.709 0.084-2.865 0.349-3.885 0.745-1.052 0.412-1.948 0.959-2.833 1.849-0.891 0.885-1.443 1.781-1.849 2.833-0.396 1.020-0.661 2.176-0.745 3.885-0.077 1.703-0.093 2.244-0.093 6.593s0.021 4.891 0.093 6.593c0.084 1.704 0.349 2.865 0.745 3.885 0.412 1.052 0.959 1.948 1.849 2.833 0.885 0.891 1.781 1.443 2.833 1.849 1.020 0.391 2.181 0.661 3.885 0.745 1.703 0.077 2.244 0.093 6.593 0.093s4.891-0.021 6.593-0.093c1.704-0.084 2.865-0.355 3.885-0.745 1.052-0.412 1.948-0.959 2.833-1.849 0.891-0.885 1.443-1.776 1.849-2.833 0.391-1.020 0.661-2.181 0.745-3.885 0.077-1.703 0.093-2.244 0.093-6.593s-0.021-4.891-0.093-6.593c-0.084-1.704-0.355-2.871-0.745-3.885-0.412-1.052-0.959-1.948-1.849-2.833-0.885-0.891-1.776-1.443-2.833-1.849-1.020-0.396-2.181-0.661-3.885-0.745-1.703-0.077-2.244-0.093-6.593-0.093zM16 2.88c4.271 0 4.781 0.021 6.469 0.093 1.557 0.073 2.405 0.333 2.968 0.553 0.751 0.291 1.276 0.635 1.844 1.197 0.557 0.557 0.901 1.088 1.192 1.839 0.22 0.563 0.48 1.411 0.553 2.968 0.072 1.688 0.093 2.199 0.093 6.469s-0.021 4.781-0.099 6.469c-0.084 1.557-0.344 2.405-0.563 2.968-0.303 0.751-0.641 1.276-1.199 1.844-0.563 0.557-1.099 0.901-1.844 1.192-0.556 0.22-1.416 0.48-2.979 0.553-1.697 0.072-2.197 0.093-6.479 0.093s-4.781-0.021-6.48-0.099c-1.557-0.084-2.416-0.344-2.979-0.563-0.76-0.303-1.281-0.641-1.839-1.199-0.563-0.563-0.921-1.099-1.197-1.844-0.224-0.556-0.48-1.416-0.563-2.979-0.057-1.677-0.084-2.197-0.084-6.459 0-4.26 0.027-4.781 0.084-6.479 0.083-1.563 0.339-2.421 0.563-2.979 0.276-0.761 0.635-1.281 1.197-1.844 0.557-0.557 1.079-0.917 1.839-1.199 0.563-0.219 1.401-0.479 2.964-0.557 1.697-0.061 2.197-0.083 6.473-0.083zM16 7.787c-4.541 0-8.213 3.677-8.213 8.213 0 4.541 3.677 8.213 8.213 8.213 4.541 0 8.213-3.677 8.213-8.213 0-4.541-3.677-8.213-8.213-8.213zM16 21.333c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333c2.948 0 5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333zM26.464 7.459c0 1.063-0.865 1.921-1.923 1.921-1.063 0-1.921-0.859-1.921-1.921 0-1.057 0.864-1.917 1.921-1.917s1.923 0.86 1.923 1.917z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-6 text-sm text-center dark:text-coolGray-400">© 1968 Company Co. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </section>
     
-      
 
+    <!--  -->
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
 </html>
